@@ -1,0 +1,28 @@
+.below{
+    display: flex;
+}
+
+.dark{
+    flex-grow: 1;
+}
+
+.light {
+    flex-grow: 1;
+}
+
+.below__text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 2;
+    padding: 3rem;
+
+    h1{
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+
+    p{
+        color: hsl(0, 0%, 63%);
+    }
+}
