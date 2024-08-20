@@ -203,7 +203,7 @@ main {
 
 .above {
   display: grid;
-  grid-template-columns: 52.5rem minmax(10rem, 70rem);
+  grid-template-columns: minmax(10rem, 52.5rem) minmax(10rem, 35rem);
   width: 100%;
   position: relative;
 }
@@ -223,4 +223,26 @@ picture {
 
 .slides {
   transition: ease-in 0.3s;
+}
+
+@media (max-width: 37.5rem) {
+  main {
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .above {
+    grid-template-columns: 1fr;
+  }
+  .below {
+    grid-template-columns: 1fr;
+  }
+  .header__text {
+    width: 100%;
+  }
+  .header__text__container {
+    margin: 0;
+  }
+  .before-after {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

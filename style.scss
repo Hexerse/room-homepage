@@ -74,9 +74,9 @@ h6 {
   --ff: "League Spartan", sans-serif;
 }
 
-@import './nav';
-@import './headerText';
-@import './below';
+@import "./nav";
+@import "./headerText";
+@import "./below";
 
 $clr-darkgray: hsl(0, 0%, 63%);
 $clr-verydarkgray: hsl(0, 0%, 27%);
@@ -85,38 +85,65 @@ $fw-regular: 600;
 $fw-bold: 600;
 $ff: "League Spartan", sans-serif;
 
-body{
-    font-family: $ff;
-    height: 100svh;
-    display: flex;
+body {
+  font-family: $ff;
+  height: 100svh;
+  display: flex;
 }
 
-main{
-    display: grid;
-    max-height: 50rem;
-    grid-template-rows: 2fr 1fr;
+main {
+  display: grid;
+  max-height: 50rem;
+  grid-template-rows: 2fr 1fr;
 }
 
-.above{
-    display: grid;
-    grid-template-columns: 52.5rem minmax(10rem, 70rem);
-    width: 100%;
-    position: relative;
+.above {
+  display: grid;
+  grid-template-columns: minmax(10rem, 52.5rem) minmax(10rem, 35rem);
+  width: 100%;
+  position: relative;
 }
 
-.below{
-    display: grid;
-    grid-template-columns: 26.25rem 36.25rem 27.5rem;
+.below {
+  display: grid;
+  grid-template-columns: 26.25rem 36.25rem 27.5rem;
 }
 
-picture{
-    width: 52.5rem;
+picture {
+  width: 52.5rem;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.slides{
+.slides {
   transition: ease-in 0.3s;
+}
+
+@media (max-width: 37.5rem) {
+  main {
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .above {
+    grid-template-columns: 1fr;
+  }
+
+  .below {
+    grid-template-columns: 1fr;
+  }
+
+  .header__text{
+    width: 100%
+  }
+
+  .header__text__container{
+    margin: 0;
+  }
+
+  .before-after{
+    display: none;
+  }
 }
